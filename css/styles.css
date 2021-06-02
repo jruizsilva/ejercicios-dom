@@ -1,5 +1,6 @@
 :root {
 	--orange: #fb9300;
+	--yellow: #ffc947;
 	--red: #f54747a4;
 	--blue: #343f56;
 	--blue-with-less-opacity: rgb(52, 63, 86, 0.8);
@@ -40,12 +41,14 @@ body {
 	padding-top: 80px;
 	padding-bottom: 40px;
 	overflow-y: auto;
-	transform: translateX(100vw);
-	transition: all 1s;
+	transform: translateX(-100vw);
+	opacity: 0;
+	transition: all 800ms ease;
 }
 /* Class for JS */
 .show-hamburger-menu {
 	transform: translateX(0);
+	opacity: 1;
 }
 .lista-secciones {
 }
@@ -103,4 +106,76 @@ body {
 	text-align: center;
 	font-size: 20px;
 	line-height: 1.4;
+}
+
+/* Relog digital y alarma*/
+.contenedor-relog,
+.contenedor-alarma {
+	max-width: 650px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+.relog,
+.alarma {
+	flex-basis: 100%;
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 16px;
+}
+.bell {
+	color: var(--yellow);
+	font-size: 120px;
+}
+.playing {
+	animation-name: playing;
+	animation-timing-function: linear;
+	animation-duration: 750ms;
+	animation-iteration-count: infinite;
+}
+@keyframes playing {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+.hora,
+.minutos {
+	margin-right: 4px;
+}
+.contenedor-relog button,
+.contenedor-alarma button {
+	padding: 8px 16px;
+	border: 0;
+	background-color: var(--red);
+	color: white;
+	font-size: 18px;
+	border-radius: 5px;
+}
+button:hover {
+	cursor: pointer;
+}
+
+/* JS clases */
+.opacity-50 {
+	opacity: 0.5;
+}
+.cursor-not-allowed:hover {
+	cursor: not-allowed;
+}
+.hidden {
+	visibility: hidden;
 }
