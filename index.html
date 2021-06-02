@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicios con DOM</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__titulo">Practicas con DOM</h1>
+		</header>
+		<span class="material-icons hamburger-menu__btn" id="hamburger-menu__btn"
+			>menu</span
+		>
+		<nav class="hamburger-menu" id="hamburger-menu">
+			<ul class="lista-secciones">
+				<li class="lista-secciones__seccion">
+					<a href="#section__1" class="lista-seccion__link">Seccion 1</a>
+				</li>
+				<li class="lista-secciones__seccion">
+					<a href="#section__2" class="lista-seccion__link">Seccion 2</a>
+				</li>
+				<li class="lista-secciones__seccion">
+					<a href="#section__3" class="lista-seccion__link">Seccion 3</a>
+				</li>
+				<li class="lista-secciones__seccion">
+					<a href="#section__4" class="lista-seccion__link">Seccion 4</a>
+				</li>
+			</ul>
+		</nav>
+		<main class="main">
+			<section class="main__section section__1" id="section__1">
+				<h2 class="section__h2">Seccion 1</h2>
+				<p>Hacer un menu de hamburguesa con JS</p>
+			</section>
+			<section class="main__section section__2" id="section__2">
+				<h2 class="section__h2">Seccion 2</h2>
+			</section>
+			<section class="main__section section__3" id="section__3">
+				<h2 class="section__h2">Seccion 3</h2>
+			</section>
+			<section class="main__section section__4" id="section__4">
+				<h2 class="section__h2">Seccion 4</h2>
+			</section>
+		</main>
+		<script src="js/dom1.js"></script>
+	</body>
+</html>
