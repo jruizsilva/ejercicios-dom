@@ -22,40 +22,49 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
-	<body>
+	<body class="body">
 		<header class="header">
 			<h1 class="header__titulo">Practicas con DOM</h1>
 		</header>
-		<span class="material-icons hamburger-menu__btn" id="hamburger-menu__btn"
+		<span
+			class="material-icons hamburger-menu__btn span"
+			id="hamburger-menu__btn"
 			>menu</span
 		>
+		<span class="material-icons arrow-up span" id="arrow-up">arrow_upward</span>
+		<span class="material-icons light-mode span" id="btn-change-mode">
+			light_mode
+		</span>
 		<nav class="hamburger-menu" id="hamburger-menu">
 			<ul class="lista-secciones">
 				<li class="lista-secciones__seccion">
-					<a href="#section__1" class="lista-seccion__link">Relog Digital</a>
+					<a href="#seccion-relog" class="lista-seccion__link">Relog Digital</a>
 				</li>
 				<li class="lista-secciones__seccion">
-					<a href="#section__2" class="lista-seccion__link">Alarma</a>
+					<a href="#seccion-alarma" class="lista-seccion__link">Alarma</a>
 				</li>
 				<li class="lista-secciones__seccion">
-					<a href="#section__3" class="lista-seccion__link">Seccion 4</a>
+					<a href="#seccion-teclado" class="lista-seccion__link"
+						>Eventos del teclado</a
+					>
+				</li>
+				<li class="lista-secciones__seccion">
+					<a href="#seccion-countdown" class="lista-seccion__link"
+						>Cuenta Regresiva</a
+					>
 				</li>
 			</ul>
 		</nav>
 		<main class="main">
-			<section class="main__section section__2" id="section__1">
+			<section class="main__section" id="seccion-relog">
 				<h2 class="section__h2">Relog Digital</h2>
 				<div class="contenedor-relog">
-					<div class="relog hidden" id="relog">
-						<span class="hora" id="hora"></span>:
-						<span class="minutos" id="minutos"></span>:
-						<span class="segundos" id="segundos"></span>
-					</div>
+					<div class="relog hidden" id="relog"></div>
 					<button type="button" id="showHour" class="">Mostrar hora</button>
 					<button type="button" id="hideHour" class="">Ocultar hora</button>
 				</div>
 			</section>
-			<section class="main__section section__3" id="section__2">
+			<section class="main__section" id="seccion-alarma">
 				<h2 class="section__h2">Alarma</h2>
 				<div class="contenedor-alarma">
 					<div class="alarma">
@@ -72,8 +81,37 @@
 					></audio>
 				</div>
 			</section>
-			<section class="main__section section__4" id="section__3">
-				<h2 class="section__h2">Seccion 4</h2>
+			<section class="main__section" id="seccion-teclado">
+				<h2 class="section__h2">Eventos del teclado</h2>
+				<div class="rectangle" id="rectangle">
+					<div class="circle" id="circle"></div>
+					<div class="contenedor-atajos">
+						<code class="code">alt + a</code>
+						<code class="code">alt + p</code>
+						<code class="code">alt + c</code>
+					</div>
+				</div>
+			</section>
+			<section class="main__section" id="seccion-countdown">
+				<h2 class="section__h2">Countdown</h2>
+				<div class="countdown" id="countdown">
+					<div>
+						<p id="days"></p>
+						<h3>Dias</h3>
+					</div>
+					<div>
+						<p id="hours"></p>
+						<h3>Horas</h3>
+					</div>
+					<div>
+						<p id="minutes"></p>
+						<h3>Minutos</h3>
+					</div>
+					<div>
+						<p id="seconds"></p>
+						<h3>Segundos</h3>
+					</div>
+				</div>
 			</section>
 		</main>
 		<script src="js/app.js" type="module"></script>

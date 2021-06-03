@@ -23,6 +23,7 @@ export const alarma = (
 			bell.textContent = "notifications";
 			bell.classList.remove("playing");
 			audio.pause();
+			audio.currentTime = 0;
 		}
 	});
 };
