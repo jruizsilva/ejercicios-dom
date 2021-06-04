@@ -9,17 +9,13 @@ import { changeMode } from "./DOM/dark_mode.js";
 const d = document;
 
 const initApp = () => {
-	showHamburgerMenu(
-		"#hamburger-menu__btn",
-		"#hamburger-menu",
-		".lista-secciones a"
-	);
-	relogDigital("#showHour", "#hideHour", "#relog");
+	showHamburgerMenu("#btn-hamburger", "#hamburger-menu", ".lista-secciones a");
+	relogDigital("#showClock", "#hideClock", "#clock");
 	alarma("#btnOnAlarm", "#btnOffAlarm", "#alarma", "#audio");
 	capturarTecla("#circle", "#rectangle");
 	atajosTeclado();
-	countdown("#countdown", "January 1, 2022 0:0:0", "Feliz cumpleaños!!");
-	arrowUp("#arrow-up");
+	countdown("#countdown", "January 1, 2022 0:0:0", "Feliz año nuevo!!");
+	arrowUp("#btn-arrow");
 	changeMode("btn-change-mode");
 };
 

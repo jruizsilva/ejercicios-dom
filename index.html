@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ejercicios con DOM</title>
+		<link rel="icon" href="assets/js-logo.png" />
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
@@ -22,17 +23,21 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
-	<body class="body">
-		<header class="header">
+	<body class="body" data-light>
+		<header class="header" data-light>
 			<h1 class="header__titulo">Practicas con DOM</h1>
 		</header>
-		<span
-			class="material-icons hamburger-menu__btn span"
-			id="hamburger-menu__btn"
+		<span class="material-icons btn-hamburger" id="btn-hamburger" data-light
 			>menu</span
 		>
-		<span class="material-icons arrow-up span" id="arrow-up">arrow_upward</span>
-		<span class="material-icons light-mode span" id="btn-change-mode">
+		<span class="material-icons btn-arrow" id="btn-arrow" data-light
+			>arrow_upward</span
+		>
+		<span
+			class="material-icons btn-change-mode"
+			id="btn-change-mode"
+			data-light
+		>
 			light_mode
 		</span>
 		<nav class="hamburger-menu" id="hamburger-menu">
@@ -55,13 +60,13 @@
 				</li>
 			</ul>
 		</nav>
-		<main class="main">
+		<main class="main" data-light>
 			<section class="main__section" id="seccion-relog">
 				<h2 class="section__h2">Relog Digital</h2>
 				<div class="contenedor-relog">
-					<div class="relog hidden" id="relog"></div>
-					<button type="button" id="showHour" class="">Mostrar hora</button>
-					<button type="button" id="hideHour" class="">Ocultar hora</button>
+					<div class="relog hidden" id="clock"></div>
+					<button type="button" id="showClock">Mostrar hora</button>
+					<button type="button" id="hideClock">Ocultar hora</button>
 				</div>
 			</section>
 			<section class="main__section" id="seccion-alarma">
@@ -70,10 +75,8 @@
 					<div class="alarma">
 						<span class="material-icons bell" id="alarma"> notifications </span>
 					</div>
-					<button type="button" id="btnOnAlarm" class="">
-						Encender Alarma
-					</button>
-					<button type="button" id="btnOffAlarm" class="">Apagar Alarma</button>
+					<button type="button" id="btnOnAlarm">Encender Alarma</button>
+					<button type="button" id="btnOffAlarm">Apagar Alarma</button>
 					<audio
 						src="https://www.talkingwav.com/wp-content/uploads/2017/10/loop_06.mp3"
 						id="audio"

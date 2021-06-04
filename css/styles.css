@@ -73,9 +73,9 @@ body {
 .lista-seccion__link:hover {
 	background-color: var(--red);
 }
-.hamburger-menu__btn,
-.arrow-up,
-.light-mode {
+.btn-hamburger,
+.btn-arrow,
+.btn-change-mode {
 	position: fixed;
 	right: 25px;
 	bottom: 25px;
@@ -87,16 +87,16 @@ body {
 	z-index: 10;
 	transition: opacity 1s linear, visibility 1s linear;
 }
-.light-mode {
+.btn-change-mode {
 	right: auto;
 	left: 25px;
 }
-.arrow-up {
+.btn-arrow {
 	right: 100px;
 }
-.hamburger-menu__btn:hover,
-.arrow-up:hover,
-.light-mode:hover {
+.btn-hamburger:hover,
+.btn-arrow:hover,
+.btn-change-mode:hover {
 	cursor: pointer;
 }
 .main {
@@ -261,7 +261,7 @@ body.change-mode {
 .header.change-mode {
 	background-color: var(--dark-blue);
 }
-.span.change-mode {
+span.change-mode {
 	background-color: var(--dark-blue);
 }
 .main.change-mode * {
