@@ -1,5 +1,11 @@
 const d = document;
-export const mostrarAlerta = (contenedor, msj, tipo, fixed = false) => {
+export const mostrarAlerta = (
+	contenedor,
+	msj,
+	tipo,
+	staticElement = false,
+	fixed = false
+) => {
 	const $contenedor = d.querySelector(contenedor);
 	const $template = d.querySelector("#template-alerta").content;
 	$template.querySelector(".alerta").textContent = msj;
@@ -15,10 +21,13 @@ export const mostrarAlerta = (contenedor, msj, tipo, fixed = false) => {
 		$template.querySelector(".alerta").classList.add("fixed");
 	}
 	const $clone = $template.cloneNode(true);
-	if (!$contenedor.querySelector(".alerta")) {
+	if (!$contenedor.querySelector(".alerta") && staticElement === false) {
 		$contenedor.appendChild($clone);
 		setTimeout(() => {
 			$contenedor.querySelector(".alerta").remove();
 		}, 2500);
+	}
+	if (staticElement) {
+		$contenedor.appendChild($clone);
 	}
 };

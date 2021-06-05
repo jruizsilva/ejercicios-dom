@@ -363,8 +363,15 @@ span.light-mode {
 	border-radius: 5px;
 }
 
-#webcam {
-	border: 3px solid var(--dark-blue);
+.container-webcam {
 	width: 100%;
 	max-width: 480px;
+	margin: 0 auto;
+	margin-bottom: 24px;
+}
+.webcam {
+	border: 3px solid var(--dark-blue);
+}
+.webcam {
+	width: 100%;
 }

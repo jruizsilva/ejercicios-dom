@@ -34,7 +34,7 @@ const initApp = () => {
 	);
 	testerResponsive("formulario");
 	statusConexion();
-	mostrarWebCam();
+	mostrarWebCam("#webcam", ".container-webcam");
 };
 changeMode("btn-change-mode", "[data-light]");
 d.addEventListener("DOMContentLoaded", initApp);
