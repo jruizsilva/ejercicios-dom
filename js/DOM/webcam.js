@@ -6,7 +6,7 @@ const md = n.mediaDevices;
 export const mostrarWebCam = () => {
 	const video = d.querySelector("#webcam");
 	const limitaciones = {
-		video: true,
+		video: { facingMode: { exact: "environment" } },
 		audio: true,
 	};
 	const request = md.getUserMedia(limitaciones);
