@@ -8,8 +8,8 @@ export const mostrarWebCam = () => {
 	const limitaciones = { video: true };
 	const request = md.getUserMedia(limitaciones);
 	request.then((camaraURL) => {
-		video.src = w.URL.createObjectURL(camaraURL);
-		// video.play();
+		video.srcObject = camaraURL;
+		video.play();
 	});
 	request.catch((error) => {
 		console.log(error);
