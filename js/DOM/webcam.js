@@ -5,7 +5,7 @@ const md = n.mediaDevices;
 
 export const mostrarWebCam = () => {
 	const video = d.querySelector("#webcam");
-	const limitaciones = { video: { facingMode: "user" } };
+	const limitaciones = { video: true };
 	const request = md.getUserMedia(limitaciones);
 	request.then((camaraURL) => {
 		video.src = w.URL.createObjectURL(camaraURL);
