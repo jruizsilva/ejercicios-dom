@@ -12,7 +12,7 @@ export const mostrarWebCam = () => {
 	const request = md.getUserMedia(limitaciones);
 	request.then((camaraURL) => {
 		console.log(camaraURL);
-		alert(camaraURL);
+		alert(JSON.stringify(camaraURL));
 	});
 	request.catch((error) => {
 		console.log(error);
