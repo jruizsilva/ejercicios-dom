@@ -5,15 +5,12 @@ const md = n.mediaDevices;
 
 export const mostrarWebCam = () => {
 	const video = d.querySelector("#webcam");
-	const limitaciones = {
-		video: { facingMode: { exact: "environment" } },
-		audio: true,
-	};
+	const limitaciones = { video: { facingMode: "user" } };
 	const request = md.getUserMedia(limitaciones);
 	request.then((camaraURL) => {
 		video.src = w.URL.createObjectURL(camaraURL);
-		video.onloadedmetadata = () => {
-			alert("cargo la meta data del video");
+		video.onloadedmetadata = function () {
+			alert("video on");
 		};
 	});
 	request.catch((error) => {
