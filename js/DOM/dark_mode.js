@@ -1,16 +1,42 @@
 const d = document;
 
-export const changeMode = (selector) => {
-	const btnChangeMode = d.getElementById(selector);
-	const selectores = d.querySelectorAll("[data-light]");
+let lightMode;
 
-	btnChangeMode.addEventListener("click", (e) => {
-		if (btnChangeMode.classList.contains("change-mode")) {
-			selectores.forEach((el) => el.classList.remove("change-mode"));
-			btnChangeMode.textContent = "light_mode";
+const setData = (data) => {
+	localStorage.setItem("light-mode", JSON.stringify(data));
+};
+const getData = () => {
+	lightMode = JSON.parse(localStorage.getItem("light-mode")) || false;
+};
+
+export function changeMode(selector, dataAttribute) {
+	const btnChangeMode = d.getElementById(selector);
+	const selectores = d.querySelectorAll(dataAttribute);
+	getData();
+	function light() {
+		selectores.forEach((el) => el.classList.add("light-mode"));
+		btnChangeMode.textContent = "dark_mode";
+		setData(true);
+	}
+	function dark() {
+		selectores.forEach((el) => el.classList.remove("light-mode"));
+		btnChangeMode.textContent = "light_mode";
+		setData(false);
+	}
+
+	btnChangeMode.addEventListener("click", () => {
+		if (lightMode === true) {
+			dark();
 		} else {
-			selectores.forEach((el) => el.classList.add("change-mode"));
-			btnChangeMode.textContent = "dark_mode";
+			light();
+		}
+		getData();
+	});
+
+	d.addEventListener("DOMContentLoaded", () => {
+		getData();
+		if (lightMode === true) {
+			light();
 		}
 	});
-};
+}

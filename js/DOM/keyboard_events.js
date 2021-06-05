@@ -12,41 +12,37 @@ export const capturarTecla = (selectorCircle, selectorRectangle) => {
 
 	const moveLeft = (e) => {
 		if (rectRectangle.left < rectCircle.left) {
-			e.preventDefault();
 			currentCoordinates.x -= 10;
 		}
 	};
 	const moveRight = (e) => {
 		if (rectRectangle.right > rectCircle.right) {
-			e.preventDefault();
 			currentCoordinates.x += 10;
 		}
 	};
 	const moveUp = (e) => {
 		if (rectCircle.top > rectRectangle.top) {
-			e.preventDefault();
 			currentCoordinates.y -= 10;
 		}
 	};
 	const moveDown = (e) => {
 		if (rectCircle.bottom < rectRectangle.bottom) {
-			e.preventDefault();
 			currentCoordinates.y += 10;
 		}
 	};
 	d.addEventListener("keydown", (e) => {
 		rectCircle = circle.getBoundingClientRect();
 		rectRectangle = rectangle.getBoundingClientRect();
-		if (e.key === "a" || e.key === "A" || e.key === "ArrowLeft") {
+		if (e.key === "a" || e.key === "A") {
 			moveLeft(e);
 		}
-		if (e.key === "d" || e.key === "D" || e.key === "ArrowRight") {
+		if (e.key === "d" || e.key === "D") {
 			moveRight(e);
 		}
-		if (e.key === "s" || e.key === "S" || e.key === "ArrowDown") {
+		if (e.key === "s" || e.key === "S") {
 			moveDown(e);
 		}
-		if (e.key === "w" || e.key === "W" || e.key === "ArrowUp") {
+		if (e.key === "w" || e.key === "W") {
 			moveUp(e);
 		}
 		circle.setAttribute(

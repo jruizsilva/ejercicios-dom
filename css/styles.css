@@ -103,8 +103,11 @@ body {
 	margin: 0 auto;
 	width: 100%;
 }
+.main a {
+	color: #ddd;
+}
 .main__section {
-	height: 100vh;
+	min-height: 100vh;
 	padding: 32px;
 	color: white;
 }
@@ -254,26 +257,108 @@ button:hover {
 .hidden {
 	visibility: hidden;
 }
+.alerta {
+	max-width: 450px;
+	margin: auto;
+	margin-top: 24px;
+	padding: 12px 0;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+}
+.error {
+	border: 1px solid rgb(134, 29, 29);
+	background-color: rgb(255, 214, 214);
+	color: rgb(134, 29, 29);
+}
+.correcto {
+	border: 1px solid rgb(30, 131, 30);
+	background-color: rgb(209, 255, 209);
+	color: rgb(30, 131, 30);
+}
+.fixed {
+	padding: 24px 64px;
+	margin-top: 0;
+	position: fixed;
+	top: 25px;
+	right: 25px;
+}
 /* Light mode */
-body.change-mode {
+body.light-mode {
 	background-color: #ddd;
 }
-.header.change-mode {
+.header.light-mode {
 	background-color: var(--dark-blue);
 }
-span.change-mode {
+span.light-mode {
 	background-color: var(--dark-blue);
 }
-.main.change-mode * {
+.lista-seccion__link.light-mode:hover {
+	background-color: var(--blue);
+}
+.main.light-mode * {
 	color: black;
 }
-.main.change-mode button {
+.main.light-mode .error {
+	color: rgb(134, 29, 29);
+}
+.main.light-mode .correcto {
+	color: rgb(30, 131, 30);
+}
+.main.light-mode button {
 	background-color: var(--blue);
 	color: white;
 }
-.main.change-mode .rectangle {
+.main.light-mode .rectangle {
 	background-color: rgb(32, 32, 48);
 }
-.main.change-mode .code {
+.main.light-mode .code {
 	background-color: #ddd;
+}
+/* Responsive video mapa */
+.container-responsive {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
+}
+/* form */
+.formulario {
+	max-width: 450px;
+	margin: 0 auto;
+}
+.campo {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+}
+.label {
+	font-weight: 400;
+	margin-bottom: 4px;
+}
+.input {
+	height: 48px;
+	padding: 8px;
+	padding-left: 12px;
+	outline: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.input:focus {
+	border-left: 3px solid var(--red);
+}
+.contenedor-btn {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 24px;
+}
+.contenedor-btn button {
+	padding: 8px 16px;
+	border: 0;
+	background-color: var(--red);
+	color: white;
+	font-size: 18px;
+	border-radius: 5px;
 }
