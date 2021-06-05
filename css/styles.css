@@ -362,3 +362,7 @@ span.light-mode {
 	font-size: 18px;
 	border-radius: 5px;
 }
+
+#webcam {
+	border: 3px solid var(--dark-blue);
+}
