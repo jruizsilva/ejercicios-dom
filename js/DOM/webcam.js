@@ -11,8 +11,10 @@ export const mostrarWebCam = () => {
 	};
 	const request = md.getUserMedia(limitaciones);
 	request.then((camaraURL) => {
-		console.log(camaraURL);
-		alert(JSON.stringify(camaraURL));
+		video.src = w.URL.createObjectURL(camaraURL);
+		video.onloadedmetadata = () => {
+			alert("cargo la meta data del video");
+		};
 	});
 	request.catch((error) => {
 		console.log(error);
