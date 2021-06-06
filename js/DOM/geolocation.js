@@ -1,3 +1,4 @@
+import { mostrarAlerta } from "../UI/alerta.js";
 const d = document;
 
 export const mostrarPosicionActual = (latitud, longitud, link) => {
@@ -13,8 +14,12 @@ export const mostrarPosicionActual = (latitud, longitud, link) => {
 		$link.setAttribute("rel", "noopener noreferrer");
 	};
 	const error = (err) => {
-		console.log(err);
-		alert(err);
+		mostrarAlerta(
+			`#` + $link.parentElement.parentElement.id,
+			err,
+			"error",
+			true
+		);
 	};
 	const options = {
 		enableHighAccuracy: true,
