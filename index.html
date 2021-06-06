@@ -91,19 +91,29 @@
 					>
 				</li>
 				<li class="lista-secciones__seccion">
-					<a
-						href="#seccion-page-webcam"
-						class="lista-seccion__link"
-						data-light=""
+					<a href="#seccion-webcam" class="lista-seccion__link" data-light=""
 						>Webcam</a
 					>
 				</li>
 				<li class="lista-secciones__seccion">
 					<a
-						href="#seccion-page-geolocalization"
+						href="#seccion-geolocalization"
 						class="lista-seccion__link"
 						data-light=""
 						>Geolocalizacion</a
+					>
+				</li>
+				<li class="lista-secciones__seccion">
+					<a
+						href="#seccion-filtro-busqueda"
+						class="lista-seccion__link"
+						data-light=""
+						>Filtro de imagenes</a
+					>
+				</li>
+				<li class="lista-secciones__seccion">
+					<a href="#seccion-sorteo" class="lista-seccion__link" data-light=""
+						>Sorteo Digital</a
 					>
 				</li>
 			</ul>
@@ -207,14 +217,97 @@
 					</div>
 				</form>
 			</section>
-			<section class="main__section" id="seccion-page-webcam">
+			<section class="main__section" id="seccion-webcam">
 				<h2 class="section__h2">Webcam</h2>
 				<div class="container-webcam">
 					<video src="" id="webcam" class="webcam"></video>
 				</div>
 			</section>
-			<section class="main__section" id="seccion-page-geolocalizacion">
+			<section class="main__section" id="seccion-geolocalization">
 				<h2 class="section__h2">Geolocalizacion</h2>
+				<div class="geolocalizacion" id="geolocalizacion">
+					<h3 class="geolocalizacion__h3">Tu posicion actual es:</h3>
+					<p class="geolocalizacion__p">
+						Latitud: <span class="bold" id="latitud"></span>
+					</p>
+					<p class="geolocalizacion__p">
+						Longitud: <span class="bold" id="longitud"></span>
+					</p>
+					<div class="container-btn">
+						<a class="geolocalizacion__link" href="" id="geolocalizacion__link"
+							>Ver en google maps</a
+						>
+					</div>
+				</div>
+			</section>
+			<section class="main__section" id="seccion-filtro-busqueda">
+				<h2 class="section__h2">Filtro de imagenes</h2>
+				<div class="contenedor__filtro">
+					<input type="text" class="input filtro" id="filtro-imagenes" />
+				</div>
+				<ul class="lista-imagenes">
+					<li class="lista-imagenes__item">
+						<img
+							src="https://placeimg.com/480/360/animals"
+							alt="animal"
+							class="lista-imagenes__img"
+						/>
+						<div class="lista-imagenes__div" data-light="">Animal</div>
+					</li>
+					<li class="lista-imagenes__item">
+						<img
+							src="https://placeimg.com/480/360/arch"
+							alt="arch"
+							class="lista-imagenes__img"
+						/>
+						<div class="lista-imagenes__div" data-light="">Arch</div>
+					</li>
+					<li class="lista-imagenes__item">
+						<img
+							src="https://placeimg.com/480/360/nature"
+							alt="nature"
+							class="lista-imagenes__img"
+						/>
+						<div class="lista-imagenes__div" data-light="">Nature</div>
+					</li>
+					<li class="lista-imagenes__item">
+						<img
+							src="https://placeimg.com/480/360/people"
+							alt="people"
+							class="lista-imagenes__img"
+						/>
+						<div class="lista-imagenes__div" data-light="">People</div>
+					</li>
+					<li class="lista-imagenes__item">
+						<img
+							src="https://placeimg.com/480/360/tech"
+							alt="tech"
+							class="lista-imagenes__img"
+						/>
+						<div class="lista-imagenes__div" data-light="">Tech</div>
+					</li>
+					<li class="lista-imagenes__item">
+						<img
+							src="https://placeimg.com/480/360/any"
+							alt="any"
+							class="lista-imagenes__img"
+						/>
+						<div class="lista-imagenes__div" data-light="">Any</div>
+					</li>
+				</ul>
+			</section>
+			<section class="main__section" id="seccion-sorteo">
+				<h2 class="section__h2">Sorteo Digital</h2>
+				<ul class="lista-lenguajes">
+					<li class="lista-lenguajes__item">Javascript</li>
+					<li class="lista-lenguajes__item">PHP</li>
+					<li class="lista-lenguajes__item">Java</li>
+					<li class="lista-lenguajes__item">Typescript</li>
+					<li class="lista-lenguajes__item">C#</li>
+				</ul>
+				<div class="contenedor-btn">
+					<button type="button" id="btn-sorteo">Obtener ganador</button>
+				</div>
 			</section>
 		</main>
 		<template id="template-alerta">

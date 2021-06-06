@@ -9,6 +9,9 @@ import { mediaResponsive } from "./DOM/responsive.js";
 import { testerResponsive } from "./DOM/page-tester.js";
 import { statusConexion } from "./DOM/comprobarConexion.js";
 import { mostrarWebCam } from "./DOM/webcam.js";
+import { mostrarPosicionActual } from "./DOM/geolocation.js";
+import { filtrarImagenes } from "./DOM/filtro-images.js";
+import { sorteo } from "./DOM/sorteo-digital.js";
 
 const d = document;
 
@@ -35,6 +38,13 @@ const initApp = () => {
 	testerResponsive("formulario");
 	statusConexion();
 	mostrarWebCam("#webcam", ".container-webcam");
+	mostrarPosicionActual("#latitud", "#longitud", "#geolocalizacion__link");
+	filtrarImagenes(
+		"filtro-imagenes",
+		".lista-imagenes",
+		".lista-imagenes__item"
+	);
+	sorteo("#btn-sorteo", ".lista-lenguajes__item");
 };
 changeMode("btn-change-mode", "[data-light]");
 d.addEventListener("DOMContentLoaded", initApp);
