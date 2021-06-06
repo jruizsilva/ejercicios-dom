@@ -14,6 +14,7 @@ export const mostrarPosicionActual = (latitud, longitud, link) => {
 	};
 	const error = (err) => {
 		console.log(err);
+		alert(err);
 	};
 	const options = {
 		enableHighAccuracy: true,
