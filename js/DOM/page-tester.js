@@ -33,13 +33,13 @@ export const testResponsivePage = (selector, url, width, height) => {
 };
 
 export const testerResponsive = (selectorForm) => {
-	const formulario = d.getElementById(selectorForm);
+	const formulario = d.querySelector(selectorForm);
 	let ventana;
 
 	const validarCampos = () => {
 		const { direccion, ancho, alto } = formulario;
 		if (direccion.value === "" || ancho.value === "" || alto.value === "") {
-			mostrarAlerta(formulario, "Todos los campos son obligatorios", "error");
+			mostrarAlerta(selectorForm, "Todos los campos son obligatorios", "error");
 			return;
 		}
 		abrirVentana();

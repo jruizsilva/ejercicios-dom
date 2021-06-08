@@ -10,7 +10,6 @@ export const sorteo = (btn, participantes) => {
 	const $btnSorteo = d.querySelector(btn);
 	const $participantes = d.querySelectorAll(participantes);
 	const cantidadParticipantes = $participantes.length;
-	console.log($participantes);
 	const obtenerGanador = () => {
 		const random = getRandomInt(0, cantidadParticipantes);
 		const ganador = $participantes[random].textContent;

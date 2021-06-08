@@ -12,6 +12,8 @@ import { mostrarWebCam } from "./DOM/webcam.js";
 import { mostrarPosicionActual } from "./DOM/geolocation.js";
 import { filtrarImagenes } from "./DOM/filtro-images.js";
 import { sorteo } from "./DOM/sorteo-digital.js";
+import { slider } from "./DOM/slider.js";
+import { observarScroll } from "./DOM/scrollspy.js";
 
 const d = document;
 
@@ -35,7 +37,7 @@ const initApp = () => {
 		`<a href="https://goo.gl/maps/yo9zCVd3XdWxX9v86" target="__blank rel="noopener noreferrer">Ver mapa</a>`,
 		`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26097506.631993342!2d-81.6605056674067!3d-37.01621831000189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5f5fdc667%3A0x3d2f77992af00fa8!2sArgentina!5e0!3m2!1ses-419!2sar!4v1622816605172!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
 	);
-	testerResponsive("formulario");
+	testerResponsive("#formulario");
 	statusConexion();
 	mostrarWebCam("#webcam", ".container-webcam");
 	mostrarPosicionActual("#latitud", "#longitud", "#geolocalizacion__link");
@@ -45,6 +47,8 @@ const initApp = () => {
 		".lista-imagenes__item"
 	);
 	sorteo("#btn-sorteo", ".lista-lenguajes__item");
+	slider("anterior", "siguiente", ".slider-imagenes__item");
+	observarScroll();
 };
 changeMode("btn-change-mode", "[data-light]");
 d.addEventListener("DOMContentLoaded", initApp);

@@ -40,6 +40,361 @@
 		<header class="header" data-light>
 			<h1 class="header__titulo">Practicas con DOM</h1>
 		</header>
+		<div class="container">
+			<div class="contenido">
+				<main class="main" data-light>
+					<section data-scroll-spy="" class="main__section" id="seccion-relog">
+						<h2 class="section__h2">Relog Digital</h2>
+						<div class="contenedor-relog">
+							<div class="relog hidden" id="clock"></div>
+							<button type="button" id="showClock">Mostrar hora</button>
+							<button type="button" id="hideClock">Ocultar hora</button>
+						</div>
+					</section>
+					<section data-scroll-spy="" class="main__section" id="seccion-alarma">
+						<h2 class="section__h2">Alarma</h2>
+						<div class="contenedor-alarma">
+							<div class="alarma">
+								<span class="material-icons bell" id="alarma">
+									notifications
+								</span>
+							</div>
+							<button type="button" id="btnOnAlarm">Encender Alarma</button>
+							<button type="button" id="btnOffAlarm">Apagar Alarma</button>
+							<audio
+								src="https://www.talkingwav.com/wp-content/uploads/2017/10/loop_06.mp3"
+								id="audio"
+								loop
+							></audio>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-teclado"
+					>
+						<h2 class="section__h2">Eventos del teclado</h2>
+						<div class="rectangle" id="rectangle">
+							<div class="circle" id="circle"></div>
+							<div class="contenedor-atajos">
+								<code class="code">alt + a</code>
+								<code class="code">alt + p</code>
+								<code class="code">alt + c</code>
+							</div>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-countdown"
+					>
+						<h2 class="section__h2">Countdown</h2>
+						<div class="countdown" id="countdown">
+							<div>
+								<p id="days"></p>
+								<h3>Dias</h3>
+							</div>
+							<div>
+								<p id="hours"></p>
+								<h3>Horas</h3>
+							</div>
+							<div>
+								<p id="minutes"></p>
+								<h3>Minutos</h3>
+							</div>
+							<div>
+								<p id="seconds"></p>
+								<h3>Segundos</h3>
+							</div>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-responsive"
+					>
+						<h2 class="section__h2">Responsive con JS</h2>
+						<div class="container-responsive" id="container-responsive">
+							<div id="video-hello-world"></div>
+							<div id="mapa-argentina"></div>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-page-tester"
+					>
+						<h2 class="section__h2">Page Responsive Tester</h2>
+						<form class="formulario" id="formulario">
+							<div class="campo">
+								<label for="#" class="label">Enlace</label>
+								<input
+									name="direccion"
+									type="url"
+									class="input"
+									placeholder="URL"
+								/>
+							</div>
+							<div class="campo">
+								<label for="#" class="label">Ancho</label>
+								<input
+									name="ancho"
+									type="text"
+									class="input"
+									placeholder="ancho ventana"
+								/>
+							</div>
+							<div class="campo">
+								<label for="#" class="label">Alto</label>
+								<input
+									name="alto"
+									type="text"
+									class="input"
+									placeholder="alto ventana"
+								/>
+							</div>
+							<div class="contenedor-btn">
+								<button type="submit">Abrir pagina</button>
+								<button type="button">Cerrar pagina</button>
+							</div>
+						</form>
+					</section>
+					<section data-scroll-spy="" class="main__section" id="seccion-webcam">
+						<h2 class="section__h2">Webcam</h2>
+						<div class="container-webcam">
+							<video src="" id="webcam" class="webcam"></video>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-geolocalization"
+					>
+						<h2 class="section__h2">Geolocalizacion</h2>
+						<div class="geolocalizacion" id="geolocalizacion">
+							<h3 class="geolocalizacion__h3">Tu posicion actual es:</h3>
+							<p class="geolocalizacion__p">
+								Latitud: <span class="bold" id="latitud"></span>
+							</p>
+							<p class="geolocalizacion__p">
+								Longitud: <span class="bold" id="longitud"></span>
+							</p>
+							<div class="container-btn">
+								<a
+									class="geolocalizacion__link"
+									href=""
+									id="geolocalizacion__link"
+									>Ver en google maps</a
+								>
+							</div>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-filtro-busqueda"
+					>
+						<h2 class="section__h2">Filtro de imagenes</h2>
+						<div class="contenedor__filtro">
+							<input type="text" class="input filtro" id="filtro-imagenes" />
+						</div>
+						<ul class="lista-imagenes">
+							<li class="lista-imagenes__item">
+								<img
+									src="https://placeimg.com/480/360/animals"
+									alt="animal"
+									class="lista-imagenes__img"
+								/>
+								<div class="lista-imagenes__div" data-light="">Animal</div>
+							</li>
+							<li class="lista-imagenes__item">
+								<img
+									src="https://placeimg.com/480/360/arch"
+									alt="arch"
+									class="lista-imagenes__img"
+								/>
+								<div class="lista-imagenes__div" data-light="">Arch</div>
+							</li>
+							<li class="lista-imagenes__item">
+								<img
+									src="https://placeimg.com/480/360/nature"
+									alt="nature"
+									class="lista-imagenes__img"
+								/>
+								<div class="lista-imagenes__div" data-light="">Nature</div>
+							</li>
+							<li class="lista-imagenes__item">
+								<img
+									src="https://placeimg.com/480/360/people"
+									alt="people"
+									class="lista-imagenes__img"
+								/>
+								<div class="lista-imagenes__div" data-light="">People</div>
+							</li>
+							<li class="lista-imagenes__item">
+								<img
+									src="https://placeimg.com/480/360/tech"
+									alt="tech"
+									class="lista-imagenes__img"
+								/>
+								<div class="lista-imagenes__div" data-light="">Tech</div>
+							</li>
+							<li class="lista-imagenes__item">
+								<img
+									src="https://placeimg.com/480/360/any"
+									alt="any"
+									class="lista-imagenes__img"
+								/>
+								<div class="lista-imagenes__div" data-light="">Any</div>
+							</li>
+						</ul>
+					</section>
+					<section data-scroll-spy="" class="main__section" id="seccion-sorteo">
+						<h2 class="section__h2">Sorteo Digital</h2>
+						<ul class="lista-lenguajes">
+							<li class="lista-lenguajes__item">Javascript</li>
+							<li class="lista-lenguajes__item">PHP</li>
+							<li class="lista-lenguajes__item">Java</li>
+							<li class="lista-lenguajes__item">Typescript</li>
+							<li class="lista-lenguajes__item">C#</li>
+						</ul>
+						<div class="contenedor-btn">
+							<button type="button" id="btn-sorteo">Obtener ganador</button>
+						</div>
+					</section>
+					<section data-scroll-spy="" class="main__section" id="seccion-slider">
+						<h2 class="section__h2">Slider de imagenes</h2>
+						<div class="contenedor-slider">
+							<ul class="slider-imagenes">
+								<li class="slider-imagenes__item z-index-100">
+									<img
+										src="assets/imagen1.jpg"
+										alt="imagen 1"
+										class="slider-imagenes__img"
+									/>
+								</li>
+								<li class="slider-imagenes__item">
+									<img
+										src="assets/imagen2.jpg"
+										alt="imagen 2"
+										class="slider-imagenes__img"
+									/>
+								</li>
+								<li class="slider-imagenes__item">
+									<img
+										src="assets/imagen3.jpg"
+										alt="imagen 3"
+										class="slider-imagenes__img"
+									/>
+								</li>
+							</ul>
+							<span class="material-icons anterior" id="anterior" data-light="">
+								chevron_left
+							</span>
+							<span
+								class="material-icons siguiente"
+								id="siguiente"
+								data-light=""
+							>
+								chevron_right
+							</span>
+						</div>
+					</section>
+				</main>
+			</div>
+			<div class="contenedor-hamburger-menu">
+				<nav class="hamburger-menu" id="hamburger-menu">
+					<ul class="lista-secciones">
+						<li class="lista-secciones__seccion">
+							<a href="#seccion-relog" class="lista-seccion__link" data-light=""
+								>Relog Digital</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-alarma"
+								class="lista-seccion__link"
+								data-light=""
+								>Alarma</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-teclado"
+								class="lista-seccion__link"
+								data-light=""
+								>Eventos del teclado</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-countdown"
+								class="lista-seccion__link"
+								data-light=""
+								>Cuenta Regresiva</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-responsive"
+								class="lista-seccion__link"
+								data-light=""
+								>Responsive con JS</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-page-tester"
+								class="lista-seccion__link"
+								data-light=""
+								>Page Responsive Tester</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-webcam"
+								class="lista-seccion__link"
+								data-light=""
+								>Webcam</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-geolocalization"
+								class="lista-seccion__link"
+								data-light=""
+								>Geolocalizacion</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-filtro-busqueda"
+								class="lista-seccion__link"
+								data-light=""
+								>Filtro de imagenes</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-sorteo"
+								class="lista-seccion__link"
+								data-light=""
+								>Sorteo Digital</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-slider"
+								class="lista-seccion__link"
+								data-light=""
+								>Slider de imagenes</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
 		<span class="material-icons btn-hamburger" id="btn-hamburger" data-light
 			>menu</span
 		>
@@ -52,264 +407,6 @@
 		<span class="material-icons btn-change-mode" id="btn-change-mode" data-light
 			>light_mode</span
 		>
-		<nav class="hamburger-menu" id="hamburger-menu">
-			<ul class="lista-secciones">
-				<li class="lista-secciones__seccion">
-					<a href="#seccion-relog" class="lista-seccion__link" data-light=""
-						>Relog Digital</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a href="#seccion-alarma" class="lista-seccion__link" data-light=""
-						>Alarma</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a href="#seccion-teclado" class="lista-seccion__link" data-light=""
-						>Eventos del teclado</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a href="#seccion-countdown" class="lista-seccion__link" data-light=""
-						>Cuenta Regresiva</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a
-						href="#seccion-responsive"
-						class="lista-seccion__link"
-						data-light=""
-						>Responsive con JS</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a
-						href="#seccion-page-tester"
-						class="lista-seccion__link"
-						data-light=""
-						>Page Responsive Tester</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a href="#seccion-webcam" class="lista-seccion__link" data-light=""
-						>Webcam</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a
-						href="#seccion-geolocalization"
-						class="lista-seccion__link"
-						data-light=""
-						>Geolocalizacion</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a
-						href="#seccion-filtro-busqueda"
-						class="lista-seccion__link"
-						data-light=""
-						>Filtro de imagenes</a
-					>
-				</li>
-				<li class="lista-secciones__seccion">
-					<a href="#seccion-sorteo" class="lista-seccion__link" data-light=""
-						>Sorteo Digital</a
-					>
-				</li>
-			</ul>
-		</nav>
-		<main class="main" data-light>
-			<section class="main__section" id="seccion-relog">
-				<h2 class="section__h2">Relog Digital</h2>
-				<div class="contenedor-relog">
-					<div class="relog hidden" id="clock"></div>
-					<button type="button" id="showClock">Mostrar hora</button>
-					<button type="button" id="hideClock">Ocultar hora</button>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-alarma">
-				<h2 class="section__h2">Alarma</h2>
-				<div class="contenedor-alarma">
-					<div class="alarma">
-						<span class="material-icons bell" id="alarma"> notifications </span>
-					</div>
-					<button type="button" id="btnOnAlarm">Encender Alarma</button>
-					<button type="button" id="btnOffAlarm">Apagar Alarma</button>
-					<audio
-						src="https://www.talkingwav.com/wp-content/uploads/2017/10/loop_06.mp3"
-						id="audio"
-						loop
-					></audio>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-teclado">
-				<h2 class="section__h2">Eventos del teclado</h2>
-				<div class="rectangle" id="rectangle">
-					<div class="circle" id="circle"></div>
-					<div class="contenedor-atajos">
-						<code class="code">alt + a</code>
-						<code class="code">alt + p</code>
-						<code class="code">alt + c</code>
-					</div>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-countdown">
-				<h2 class="section__h2">Countdown</h2>
-				<div class="countdown" id="countdown">
-					<div>
-						<p id="days"></p>
-						<h3>Dias</h3>
-					</div>
-					<div>
-						<p id="hours"></p>
-						<h3>Horas</h3>
-					</div>
-					<div>
-						<p id="minutes"></p>
-						<h3>Minutos</h3>
-					</div>
-					<div>
-						<p id="seconds"></p>
-						<h3>Segundos</h3>
-					</div>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-responsive">
-				<h2 class="section__h2">Responsive con JS</h2>
-				<div class="container-responsive" id="container-responsive">
-					<div id="video-hello-world"></div>
-					<div id="mapa-argentina"></div>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-page-tester">
-				<h2 class="section__h2">Page Responsive Tester</h2>
-				<form class="formulario" id="formulario">
-					<div class="campo">
-						<label for="#" class="label">Enlace</label>
-						<input
-							name="direccion"
-							type="url"
-							class="input"
-							placeholder="URL"
-						/>
-					</div>
-					<div class="campo">
-						<label for="#" class="label">Ancho</label>
-						<input
-							name="ancho"
-							type="text"
-							class="input"
-							placeholder="ancho ventana"
-						/>
-					</div>
-					<div class="campo">
-						<label for="#" class="label">Alto</label>
-						<input
-							name="alto"
-							type="text"
-							class="input"
-							placeholder="alto ventana"
-						/>
-					</div>
-					<div class="contenedor-btn">
-						<button type="submit">Abrir pagina</button>
-						<button type="button">Cerrar pagina</button>
-					</div>
-				</form>
-			</section>
-			<section class="main__section" id="seccion-webcam">
-				<h2 class="section__h2">Webcam</h2>
-				<div class="container-webcam">
-					<video src="" id="webcam" class="webcam"></video>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-geolocalization">
-				<h2 class="section__h2">Geolocalizacion</h2>
-				<div class="geolocalizacion" id="geolocalizacion">
-					<h3 class="geolocalizacion__h3">Tu posicion actual es:</h3>
-					<p class="geolocalizacion__p">
-						Latitud: <span class="bold" id="latitud"></span>
-					</p>
-					<p class="geolocalizacion__p">
-						Longitud: <span class="bold" id="longitud"></span>
-					</p>
-					<div class="container-btn">
-						<a class="geolocalizacion__link" href="" id="geolocalizacion__link"
-							>Ver en google maps</a
-						>
-					</div>
-				</div>
-			</section>
-			<section class="main__section" id="seccion-filtro-busqueda">
-				<h2 class="section__h2">Filtro de imagenes</h2>
-				<div class="contenedor__filtro">
-					<input type="text" class="input filtro" id="filtro-imagenes" />
-				</div>
-				<ul class="lista-imagenes">
-					<li class="lista-imagenes__item">
-						<img
-							src="https://placeimg.com/480/360/animals"
-							alt="animal"
-							class="lista-imagenes__img"
-						/>
-						<div class="lista-imagenes__div" data-light="">Animal</div>
-					</li>
-					<li class="lista-imagenes__item">
-						<img
-							src="https://placeimg.com/480/360/arch"
-							alt="arch"
-							class="lista-imagenes__img"
-						/>
-						<div class="lista-imagenes__div" data-light="">Arch</div>
-					</li>
-					<li class="lista-imagenes__item">
-						<img
-							src="https://placeimg.com/480/360/nature"
-							alt="nature"
-							class="lista-imagenes__img"
-						/>
-						<div class="lista-imagenes__div" data-light="">Nature</div>
-					</li>
-					<li class="lista-imagenes__item">
-						<img
-							src="https://placeimg.com/480/360/people"
-							alt="people"
-							class="lista-imagenes__img"
-						/>
-						<div class="lista-imagenes__div" data-light="">People</div>
-					</li>
-					<li class="lista-imagenes__item">
-						<img
-							src="https://placeimg.com/480/360/tech"
-							alt="tech"
-							class="lista-imagenes__img"
-						/>
-						<div class="lista-imagenes__div" data-light="">Tech</div>
-					</li>
-					<li class="lista-imagenes__item">
-						<img
-							src="https://placeimg.com/480/360/any"
-							alt="any"
-							class="lista-imagenes__img"
-						/>
-						<div class="lista-imagenes__div" data-light="">Any</div>
-					</li>
-				</ul>
-			</section>
-			<section class="main__section" id="seccion-sorteo">
-				<h2 class="section__h2">Sorteo Digital</h2>
-				<ul class="lista-lenguajes">
-					<li class="lista-lenguajes__item">Javascript</li>
-					<li class="lista-lenguajes__item">PHP</li>
-					<li class="lista-lenguajes__item">Java</li>
-					<li class="lista-lenguajes__item">Typescript</li>
-					<li class="lista-lenguajes__item">C#</li>
-				</ul>
-				<div class="contenedor-btn">
-					<button type="button" id="btn-sorteo">Obtener ganador</button>
-				</div>
-			</section>
-		</main>
 		<template id="template-alerta">
 			<div class="alerta">Todos los campos son obligatorios</div>
 		</template>

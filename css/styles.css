@@ -35,6 +35,12 @@ body {
 	align-items: center;
 	height: 80px;
 }
+@media screen and (min-width: 1024px) {
+	.header {
+		justify-content: flex-end;
+		padding-right: 16px;
+	}
+}
 .header__titulo {
 	color: white;
 	text-align: center;
@@ -75,6 +81,9 @@ body {
 	align-items: center;
 	color: white;
 }
+.lista-seccion__link--active {
+	background-color: var(--red);
+}
 .lista-seccion__link:hover {
 	background-color: var(--red);
 }
@@ -91,13 +100,46 @@ body {
 	padding: 16px;
 	z-index: 200;
 	transition: opacity 1s linear, visibility 1s linear;
+	user-select: none;
+}
+.btn-arrow {
+	right: 100px;
 }
 .btn-change-mode {
 	right: auto;
 	left: 25px;
 }
-.btn-arrow {
-	right: 100px;
+@media screen and (min-width: 1024px) {
+	.btn-hamburger {
+		visibility: hidden;
+	}
+	.btn-arrow {
+		right: 345px;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.contenido {
+		flex-basis: 100%;
+	}
+	.contenedor-hamburger-menu {
+		flex-basis: 400px;
+	}
+	.hamburger-menu {
+		position: sticky;
+		transform: translateX(0);
+		opacity: 1;
+		top: 0;
+		right: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+	.lista-seccion__link {
+		justify-content: right;
+		padding: 8px 0;
+		padding-right: 16px;
+	}
 }
 .btn-hamburger:hover,
 .btn-arrow:hover,
@@ -299,6 +341,9 @@ body.light-mode {
 span.light-mode {
 	background-color: var(--dark-blue);
 }
+.lista-seccion__link--active.light-mode {
+	background-color: var(--blue);
+}
 .lista-seccion__link.light-mode:hover {
 	background-color: var(--blue);
 }
@@ -446,4 +491,55 @@ span.light-mode {
 	text-align: center;
 	font-weight: 400;
 	margin-bottom: 16px;
+}
+/* Slider */
+.contenedor-slider {
+	position: relative;
+}
+.slider-imagenes {
+	width: 100%;
+	height: 70vh;
+}
+.slider-imagenes__item {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+.slider-imagenes__img {
+	object-fit: cover;
+	width: inherit;
+	height: inherit;
+}
+.anterior,
+.siguiente {
+	position: absolute;
+	font-size: 48px;
+	z-index: 100;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+.anterior {
+	left: 0;
+	top: 0;
+}
+.siguiente {
+	right: 0;
+	top: 0;
+}
+.anterior:hover,
+.siguiente:hover {
+	cursor: pointer;
+}
+.siguiente.light-mode,
+.anterior.light-mode {
+	color: white;
+	background-color: transparent;
+}
+/* Class for JS */
+.z-index-100 {
+	z-index: 100;
 }
