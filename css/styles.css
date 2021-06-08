@@ -610,10 +610,45 @@ span.light-mode {
 	font-size: 16px;
 	font-weight: 400;
 }
+/* Estilos con solo html y css */
 .container-form__form [required]:invalid {
-	border-bottom: 2px solid var(--error);
+	/* border-bottom: 2px solid var(--error); */
 }
 .container-form__form [required]:valid {
+	/* border-bottom: 2px solid var(--blue); */
+}
+/* Class for JS */
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loading::after {
+	content: "";
+	display: block;
+	border: 2px solid var(--blue);
+	border-left-color: transparent;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	animation: rotar 1s linear;
+	animation-iteration-count: infinite;
+}
+.none {
+	display: none;
+}
+@keyframes rotar {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.invalid {
+	border-bottom: 2px solid var(--error);
+}
+.valid {
 	border-bottom: 2px solid var(--blue);
 }
 .container-form__textarea {
@@ -627,6 +662,9 @@ span.light-mode {
 .container-form__error {
 	color: var(--error);
 }
+.container-form__error.light-mode {
+	color: var(--error);
+}
 .container-form__submit {
 	display: block;
 	width: 100%;
@@ -638,6 +676,7 @@ span.light-mode {
 	font-weight: 500;
 	cursor: pointer;
 	border: none;
+	margin-bottom: 16px;
 }
 .container-form__submit.light-mode {
 	background-color: var(--blue);
