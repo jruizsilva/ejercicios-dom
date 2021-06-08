@@ -2,6 +2,7 @@
 	--orange: #fb9300;
 	--yellow: #ffc947;
 	--red: #f54747a4;
+	--error: rgb(199, 30, 30);
 	--blue: #343f56;
 	--blue-with-less-opacity: rgb(52, 63, 86, 0.8);
 	--fuente: "Raleway", sans-serif;
@@ -295,6 +296,9 @@ button:hover {
 .opacity-50 {
 	opacity: 0.5;
 }
+.opacity-60 {
+	opacity: 0.6;
+}
 .opacity-100 {
 	opacity: 1;
 }
@@ -542,4 +546,86 @@ span.light-mode {
 /* Class for JS */
 .z-index-100 {
 	z-index: 100;
+}
+/* Video inteligente */
+.contenedor-video-inteligente {
+	width: 768px;
+	height: 70vh;
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: var(--dark-blue);
+}
+.video-inteligente {
+	width: 100%;
+	height: 100%;
+}
+/* validacion formulario */
+.container-form {
+	width: 640px;
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.container-form__header {
+	text-align: center;
+	padding: 16px 0;
+	background-color: var(--red);
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 2;
+}
+.container-form__form {
+	background-color: #ddd;
+	color: black;
+	padding: 24px;
+}
+.container-form__campo {
+	margin-bottom: 8px;
+}
+.container-form__label {
+	display: block;
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 2px;
+}
+.container-form__input,
+.container-form__textarea {
+	display: block;
+	height: 48px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	margin-bottom: 2px;
+	padding: 8px;
+}
+.container-form__textarea {
+	resize: none;
+	height: 96px;
+}
+.container-form__input:focus,
+.container-form__textarea:focus {
+	outline: 1px solid var(--dark-blue);
+}
+.container-form__error {
+	color: var(--error);
+	visibility: hidden;
+}
+.container-form__submit {
+	display: block;
+	width: 100%;
+	height: 48px;
+	background-color: var(--blue);
+	color: white;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+}
+/* Class for JS */
+.container-form__submit:hover {
+	cursor: pointer;
+}
+.container-form__submit.cursor-not-allowed:hover {
+	cursor: not-allowed;
 }

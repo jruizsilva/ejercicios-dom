@@ -14,6 +14,7 @@ import { filtrarImagenes } from "./DOM/filtro-images.js";
 import { sorteo } from "./DOM/sorteo-digital.js";
 import { slider } from "./DOM/slider.js";
 import { observarScroll } from "./DOM/scrollspy.js";
+import { observerVideo } from "./DOM/autoplay-video.js";
 
 const d = document;
 
@@ -49,6 +50,7 @@ const initApp = () => {
 	sorteo("#btn-sorteo", ".lista-lenguajes__item");
 	slider("anterior", "siguiente", ".slider-imagenes__item");
 	observarScroll();
+	observerVideo();
 };
 changeMode("btn-change-mode", "[data-light]");
 d.addEventListener("DOMContentLoaded", initApp);

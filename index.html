@@ -300,6 +300,85 @@
 							</span>
 						</div>
 					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-video-inteligente"
+					>
+						<h2 class="section__h2">Video inteligente</h2>
+						<div class="contenedor-video-inteligente">
+							<video
+								src="assets/lavadora.mp4"
+								data-video-spy=""
+								class="video-inteligente"
+								muted
+								loop
+								controls
+							></video>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-validacion-formulario"
+					>
+						<h2 class="section__h2">Validacion de formulario</h2>
+						<div class="container-form">
+							<div class="container-form__header">Enviar email</div>
+							<form class="container-form__form">
+								<div class="container-form__campo">
+									<label for="nombre" class="container-form__label"
+										>Nombre</label
+									>
+									<input
+										type="text"
+										class="container-form__input"
+										id="nombre"
+									/>
+									<small class="container-form__error">Ingrese un nombre</small>
+								</div>
+								<div class="container-form__campo">
+									<label for="email" class="container-form__label">Email</label>
+									<input
+										type="email"
+										class="container-form__input"
+										id="email"
+									/>
+									<small class="container-form__error"
+										>Ingrese un email valido</small
+									>
+								</div>
+								<div class="container-form__campo">
+									<label for="asunto" class="container-form__label"
+										>Asunto</label
+									>
+									<input
+										type="text"
+										class="container-form__input"
+										id="asunto"
+									/>
+									<small class="container-form__error">Ingrese un asunto</small>
+								</div>
+								<div class="container-form__campo">
+									<label for="mensaje" class="container-form__label"
+										>Mensaje</label
+									>
+									<textarea
+										id="mensaje"
+										class="container-form__textarea"
+									></textarea>
+									<small class="container-form__error"
+										>Ingrese un mensaje</small
+									>
+								</div>
+								<input
+									type="submit"
+									class="container-form__submit opacity-60 cursor-not-allowed"
+									disabled
+								/>
+							</form>
+						</div>
+					</section>
 				</main>
 			</div>
 			<div class="contenedor-hamburger-menu">
@@ -388,6 +467,22 @@
 								class="lista-seccion__link"
 								data-light=""
 								>Slider de imagenes</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-video-inteligente"
+								class="lista-seccion__link"
+								data-light=""
+								>Video inteligente</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-validacion-formulario"
+								class="lista-seccion__link"
+								data-light=""
+								>Validacion de formulario</a
 							>
 						</li>
 					</ul>
