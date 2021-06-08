@@ -2,7 +2,6 @@ const d = document;
 
 export const observarScroll = () => {
 	const $viewport = d.querySelectorAll(`section[data-scroll-spy]`);
-	console.log($viewport);
 	const options = { threshold: 0.5 };
 	const callback = (entries) => {
 		entries.forEach((el) => {

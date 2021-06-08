@@ -2,7 +2,6 @@ const d = document;
 
 export const observerVideo = () => {
 	const $video = d.querySelector(`video[data-video-spy]`);
-	console.log($video);
 
 	const cb = (entries) => {
 		entries.forEach((el) => {

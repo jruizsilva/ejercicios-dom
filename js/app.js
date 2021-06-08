@@ -15,6 +15,7 @@ import { sorteo } from "./DOM/sorteo-digital.js";
 import { slider } from "./DOM/slider.js";
 import { observarScroll } from "./DOM/scrollspy.js";
 import { observerVideo } from "./DOM/autoplay-video.js";
+// import { validarFormulario } from "./DOM/form-validation.js";
 
 const d = document;
 
@@ -51,6 +52,7 @@ const initApp = () => {
 	slider("anterior", "siguiente", ".slider-imagenes__item");
 	observarScroll();
 	observerVideo();
+	// validarFormulario();
 };
 changeMode("btn-change-mode", "[data-light]");
 d.addEventListener("DOMContentLoaded", initApp);

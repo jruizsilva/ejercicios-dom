@@ -566,6 +566,7 @@ span.light-mode {
 	margin: 0 auto;
 	border-radius: 10px;
 	overflow: hidden;
+	margin-bottom: 64px;
 }
 .container-form__header {
 	text-align: center;
@@ -575,10 +576,17 @@ span.light-mode {
 	font-weight: 500;
 	letter-spacing: 2;
 }
+.container-form__header.light-mode {
+	background-color: var(--blue);
+	color: white;
+}
 .container-form__form {
 	background-color: #ddd;
 	color: black;
 	padding: 24px;
+}
+.container-form__form.light-mode {
+	background-color: #efefef;
 }
 .container-form__campo {
 	margin-bottom: 8px;
@@ -597,7 +605,16 @@ span.light-mode {
 	border-radius: 5px;
 	border: 1px solid #aaa;
 	margin-bottom: 2px;
-	padding: 8px;
+	font-family: inherit;
+	padding: 8px 10px;
+	font-size: 16px;
+	font-weight: 400;
+}
+.container-form__form [required]:invalid {
+	border-bottom: 2px solid var(--error);
+}
+.container-form__form [required]:valid {
+	border-bottom: 2px solid var(--blue);
 }
 .container-form__textarea {
 	resize: none;
@@ -605,11 +622,10 @@ span.light-mode {
 }
 .container-form__input:focus,
 .container-form__textarea:focus {
-	outline: 1px solid var(--dark-blue);
+	outline: 1px solid #999;
 }
 .container-form__error {
 	color: var(--error);
-	visibility: hidden;
 }
 .container-form__submit {
 	display: block;
@@ -620,12 +636,10 @@ span.light-mode {
 	font-family: inherit;
 	font-size: 18px;
 	font-weight: 500;
+	cursor: pointer;
 	border: none;
 }
-/* Class for JS */
-.container-form__submit:hover {
-	cursor: pointer;
-}
-.container-form__submit.cursor-not-allowed:hover {
-	cursor: not-allowed;
+.container-form__submit.light-mode {
+	background-color: var(--blue);
+	color: white;
 }
