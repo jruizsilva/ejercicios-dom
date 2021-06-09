@@ -16,6 +16,7 @@ import { slider } from "./DOM/slider.js";
 import { observarScroll } from "./DOM/scrollspy.js";
 import { observerVideo } from "./DOM/autoplay-video.js";
 import { validarFormulario } from "./DOM/form-validation.js";
+import { narrarTexto } from "./DOM/narrador-de-voz.js";
 
 const d = document;
 
@@ -55,4 +56,5 @@ const initApp = () => {
 	validarFormulario();
 };
 changeMode("btn-change-mode", "[data-light]");
+narrarTexto();
 d.addEventListener("DOMContentLoaded", initApp);
