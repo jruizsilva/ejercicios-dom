@@ -56,7 +56,6 @@ export const validarFormulario = () => {
 		});
 	});
 
-	/*
 	$formulario.addEventListener("submit", (e) => {
 		e.preventDefault();
 		$formulario.querySelector(".loading").classList.remove("none");
@@ -71,5 +70,5 @@ export const validarFormulario = () => {
 				resetFormulario($formulario, $campos);
 			}, 1500);
 		}, 1500);
-	});*/
+	});
 };
