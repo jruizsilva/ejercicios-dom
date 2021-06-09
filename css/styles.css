@@ -598,7 +598,8 @@ span.light-mode {
 	margin-bottom: 2px;
 }
 .container-form__input,
-.container-form__textarea {
+.container-form__textarea,
+.container-form__select {
 	display: block;
 	height: 48px;
 	width: 100%;

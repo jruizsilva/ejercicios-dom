@@ -41,8 +41,10 @@ const resetFormulario = ($formulario, $campos) => {
 };
 
 export const validarFormulario = () => {
-	const $formulario = d.querySelector(".container-form__form");
-	const $campos = d.querySelectorAll(".container-form__campo");
+	const $formulario = d.querySelector(
+		".container-form__form[data-form-validation]"
+	);
+	const $campos = d.querySelectorAll(".container-form__campo[data-form-campo]");
 
 	let idTimeout = null;
 

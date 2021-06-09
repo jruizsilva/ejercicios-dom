@@ -329,6 +329,7 @@
 							</div>
 							<form
 								class="container-form__form"
+								data-form-validation
 								autocomplete="off"
 								data-light=""
 							>
@@ -403,6 +404,43 @@
 									value="Enviar Formulario"
 								/>
 								<div class="loading none"></div>
+							</form>
+						</div>
+					</section>
+					<section
+						data-scroll-spy=""
+						class="main__section"
+						id="seccion-narrador"
+					>
+						<h2 class="section__h2">Narrador de texto</h2>
+						<div class="container-form">
+							<form class="container-form__form">
+								<div class="container-form__campo">
+									<label for="voz" class="container-form__label"
+										>Voces disponibles</label
+									>
+									<select
+										name="voz"
+										id="voz"
+										class="container-form__select"
+									></select>
+								</div>
+								<div class="container-form__campo">
+									<label for="texto" class="container-form__label">Texto</label>
+									<textarea
+										class="container-form__textarea"
+										name="texto"
+										id="texto"
+										placeholder="Introduce el texto a narrar"
+										required
+									></textarea>
+								</div>
+
+								<input
+									type="submit"
+									class="container-form__submit"
+									value="Leer texto"
+								/>
 							</form>
 						</div>
 					</section>
@@ -510,6 +548,14 @@
 								class="lista-seccion__link"
 								data-light=""
 								>Validacion de formulario</a
+							>
+						</li>
+						<li class="lista-secciones__seccion">
+							<a
+								href="#seccion-narrador"
+								class="lista-seccion__link"
+								data-light=""
+								>Narrador de texto</a
 							>
 						</li>
 					</ul>
