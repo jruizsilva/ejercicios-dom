@@ -6,7 +6,9 @@ export const narrarTexto = () => {
 	const $text = d.querySelector("textarea#texto");
 
 	// Speech synthesis Utterance
-	const utterance = new SpeechSynthesisUtterance("Hello world!");
+	const utterance = new SpeechSynthesisUtterance(
+		"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+	);
 
-	alert(JSON.stringify(speechSynthesis.getVoices()));
+	speechSynthesis.speak(utterance);
 };
