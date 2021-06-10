@@ -10,10 +10,6 @@ export const narrarTexto = () => {
 
 	const leerTexto = (e) => {
 		e.preventDefault()
-		console.log($voces.value)
-		console.log($voces.textContent)
-		// SpeechSynthesisVoice.voiceURI = "hola"
-		// Speech synthesis Utterance
 		const utterance = new SpeechSynthesisUtterance($text.value);
 		utterance.voice = vocesDisponibles[$voces.value]
 		speechSynthesis.speak(utterance);
@@ -24,8 +20,10 @@ export const narrarTexto = () => {
 	const mostrarVoces = () => {
 		vocesDisponibles = speechSynthesis.getVoices();
 		if(vocesDisponibles.length > 0){
+			vocesDisponibles = vocesDisponibles.sort(function (a, b) {
+				return a.name.localeCompare(b.name);
+			})
 			const $fragment = d.createDocumentFragment()
-			console.log(vocesDisponibles[5])
 			vocesDisponibles.forEach((voz,index) => {
 				const $option = d.createElement("option")
 				$option.textContent = voz.name
