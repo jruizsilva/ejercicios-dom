@@ -54,7 +54,7 @@ const initApp = () => {
 	observarScroll();
 	observerVideo();
 	validarFormulario();
+	narrarTexto();
 };
 changeMode("btn-change-mode", "[data-light]");
-narrarTexto();
 d.addEventListener("DOMContentLoaded", initApp);

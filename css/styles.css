@@ -137,7 +137,7 @@ body {
 		padding: 0;
 	}
 	.lista-seccion__link {
-		justify-content: right;
+		justify-content: flex-end;
 		padding: 8px 0;
 		padding-right: 16px;
 	}
