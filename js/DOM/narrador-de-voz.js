@@ -12,6 +12,7 @@ export const narrarTexto = () => {
 		e.preventDefault()
 		const utterance = new SpeechSynthesisUtterance($text.value);
 		utterance.voice = vocesDisponibles[$voces.value]
+		alert(utterance.voice.name)
 		speechSynthesis.speak(utterance);
 	};
 
