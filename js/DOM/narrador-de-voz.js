@@ -6,38 +6,36 @@ export const narrarTexto = () => {
 	const $voces = d.querySelector("select#voz");
 	const $text = d.querySelector("textarea#texto");
 
-	let vocesDisponibles = []
+	let vocesDisponibles = [];
 
 	const leerTexto = (e) => {
-		e.preventDefault()
+		e.preventDefault();
 		const utterance = new SpeechSynthesisUtterance($text.value);
-		utterance.voice = vocesDisponibles[$voces.value]
-		alert(utterance.voice.name)
+		utterance.voice = vocesDisponibles[$voces.value];
 		speechSynthesis.speak(utterance);
 	};
 
-	$formulario.addEventListener("submit", leerTexto)
+	$formulario.addEventListener("submit", leerTexto);
 
 	const mostrarVoces = () => {
 		vocesDisponibles = speechSynthesis.getVoices();
-		if(vocesDisponibles.length > 0){
+		if (vocesDisponibles.length > 0) {
 			vocesDisponibles = vocesDisponibles.sort(function (a, b) {
 				return a.name.localeCompare(b.name);
-			})
-			const $fragment = d.createDocumentFragment()
-			vocesDisponibles.forEach((voz,index) => {
-				const $option = d.createElement("option")
-				$option.textContent = voz.name
-				$option.value = index
-				$fragment.appendChild($option)
-			})
-			$voces.appendChild($fragment)
+			});
+			const $fragment = d.createDocumentFragment();
+			vocesDisponibles.forEach((voz, index) => {
+				const $option = d.createElement("option");
+				$option.textContent = voz.name;
+				$option.value = index;
+				$fragment.appendChild($option);
+			});
+			$voces.appendChild($fragment);
 		}
-	}
+	};
 
-	mostrarVoces()
-	if(speechSynthesis.onvoiceschanged !== undefined){
-		speechSynthesis.onvoiceschanged = mostrarVoces
+	mostrarVoces();
+	if (speechSynthesis.onvoiceschanged !== undefined) {
+		speechSynthesis.onvoiceschanged = mostrarVoces;
 	}
-
 };
